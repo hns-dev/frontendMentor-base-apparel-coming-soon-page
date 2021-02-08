@@ -123,49 +123,36 @@ header {
         opacity: 0.5;
       }
 
+      input:valid,
+      input:focus,
+      input:active {
+        border: 0.1px solid $try;
+      }
+
       input:invalid {
         border: 2px solid $soft-red;
-        background-color: linear-gradient(
-          135deg,
-          hsl(0, 0%, 100%),
-          hsl(0, 100%, 98%)
-        );
       }
 
       // input:required {
       //   border: 0.1px solid $try;
       // }
 
-      input:focus:invalid {
-        outline: none;
-      }
-
-      input:focus,
-      input:active {
-        background: linear-gradient(
-          135deg,
-          hsl(0, 0%, 100%),
-          hsl(0, 100%, 98%)
-        );
-      }
+      // input:required:invalid {
+      //   border: 2px solid $soft-red;
+      // }
 
       .error {
-        // display: none;
         color: $soft-red;
         text-align: left;
         font-size: 13px;
         padding-left: 1.5em;
       }
 
-      .error.active {
-        padding: 0.3em;
-      }
-
       .error-icon {
         display: none;
         position: absolute;
         top: 0.7em;
-        right: 4.9em;
+        right: 5.3em;
       }
 
       button {
@@ -188,9 +175,10 @@ header {
   }
 }
 
-.hidden {
+.hero-desktop {
   display: none;
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -202,16 +190,60 @@ header {
 }
 
 // Media Queries
-@media (min-width: 1440px) {
+@media (min-width: 515px) {
+  .container {
+    width: 75%;
+  }
+
+  .hero-section {
+    .hero-text {
+      h1 {
+        font-size: 3em;
+      }
+    }
+  }
+}
+
+// @media (min-width: 850px) {
+//   .container {
+//     width: 60%;
+//   }
+
+//   .hero-section {
+//     .hero-img {
+//       max-height: 380px;
+//       overflow: hidden;
+
+//       img {
+//         max-width: 100%;
+//         height: auto;
+//         object-fit: contain;
+//         object-position: bottom;
+//       }
+//     }
+
+//     .hero-text {
+//       h1 {
+//         font-size: 3.5em;
+//       }
+//     }
+//   }
+// }
+
+@media (min-width: 970px) {
   body {
     background: url("../images/bg-pattern-desktop.svg") no-repeat;
-    background-size: 55%;
+    background-size: 55% 100%;
     height: 100vh;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   .container {
     width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   header {
@@ -227,14 +259,20 @@ header {
   }
 
   .hero-section {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
 
     .hero-img {
       flex: 45%;
-      max-width: 100%;
-      object-fit: cover;
+      height: 100%;
+      img {
+        max-width: 100%;
+        // height: 100%;
+        object-fit: 100%;
+      }
     }
 
     .hero-text {
@@ -263,6 +301,14 @@ header {
         padding: 1.1em 2.7em;
       }
     }
+  }
+
+  .hero-mobile {
+    display: none;
+  }
+
+  .hero-desktop {
+    display: block;
   }
 
   .attribution {

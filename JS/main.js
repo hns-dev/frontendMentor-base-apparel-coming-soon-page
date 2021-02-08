@@ -22,6 +22,7 @@ email.addEventListener('input', function (event) {
 });
 
 form.addEventListener('submit', function (event) {
+  event.preventDefault();
   // if the email field is valid, we let the form submit
 
   if(!email.validity.valid) {
@@ -37,12 +38,14 @@ function showError() {
     // If the field is empty
     // display the following error message.
     emailError.textContent = 'You need to enter an e-mail address.';
+    emailErrorIcon.style.display = 'block';
+    // email.style.border = '2px solid $soft-red';
   } else if(email.validity.typeMismatch) {
     // If the field doesn't contain an email address
     // display the following error message.
     emailError.textContent = 'Please provide a valid email';
     emailErrorIcon.style.display = 'block';
-    email.style.borderColor = '$soft-red';
+    // email.style.border = '2px solid $soft-red';
   } 
 }
 
