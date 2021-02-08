@@ -107,7 +107,7 @@ header {
       input[type="email"] {
         width: 100%;
         padding: 1.2em 1.5em;
-        border: 0.1px solid $try;
+        border: 1px solid $try;
         border-radius: 55px;
         outline: none;
         color: $dark-grayish-red;
@@ -126,7 +126,7 @@ header {
       input:valid,
       input:focus,
       input:active {
-        border: 0.1px solid $try;
+        border: 1px solid $try;
       }
 
       input:invalid {
@@ -151,7 +151,7 @@ header {
       select:-webkit-autofill:hover,
       select:-webkit-autofill:focus,
       input:valid {
-        border: 0.1px solid $try;
+        border: 1px solid $try;
         -webkit-text-fill-color: $dark-grayish-red;
         transition: background-color 5000s ease-in-out 0s;
       }
@@ -181,6 +181,7 @@ header {
         border: none;
         background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
         box-shadow: 2px 10px 20px 5px rgba(283, 140, 140, 0.3);
+        transition: background 5000s ease-in-out 0s;
       }
 
       button:hover {
