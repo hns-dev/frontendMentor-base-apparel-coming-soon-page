@@ -148,6 +148,22 @@ header .logo {
   border: 2px solid #f96262;
 }
 
+.hero-section .hero-text form input:-webkit-autofill,
+.hero-section .hero-text form input:-webkit-autofill:hover,
+.hero-section .hero-text form input:-webkit-autofill:focus,
+.hero-section .hero-text form textarea:-webkit-autofill,
+.hero-section .hero-text form textarea:-webkit-autofill:hover,
+.hero-section .hero-text form textarea:-webkit-autofill:focus,
+.hero-section .hero-text form select:-webkit-autofill,
+.hero-section .hero-text form select:-webkit-autofill:hover,
+.hero-section .hero-text form select:-webkit-autofill:focus,
+.hero-section .hero-text form input:valid {
+  border: 0.1px solid rgba(206, 151, 151, 0.5);
+  -webkit-text-fill-color: #413a3a;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .hero-section .hero-text form .error {
   color: #f96262;
   text-align: left;
