@@ -6,12 +6,12 @@ $soft-red: hsl(0, 93%, 68%);
 // Neutral
 $dark-grayish-red: hsl(0, 6%, 24%);
 // Gradients
-$col: hsl(0, 0%, 100%);
-$col2: hsl(0, 100%, 98%);
-$col3: hsl(0, 80%, 86%);
-$col4: hsl(0, 74%, 74%);
+$gradient1: hsl(0, 0%, 100%);
+$gradient2: hsl(0, 100%, 98%);
+$gradient3: hsl(0, 80%, 86%);
+$gradient4: hsl(0, 74%, 74%);
 
-$try: rgba(206, 151, 151, 0.5);
+$border-color: rgba(206, 151, 151, 0.5);
 
 // Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
 // - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
@@ -109,7 +109,7 @@ header {
           width: 100%;
           padding: 1.2em 1.5em;
           border: none;
-          border: 1px solid $try;
+          border: 1px solid $border-color;
           border-radius: 55px;
           outline: none;
           color: $dark-grayish-red;
@@ -135,7 +135,7 @@ header {
         select:-webkit-autofill:hover,
         select:-webkit-autofill:focus,
         input:valid {
-          border: 1px solid $try;
+          border: 1px solid $border-color;
           -webkit-text-fill-color: $dark-grayish-red;
           transition: background-color 5000s ease-in-out 0s;
         }
@@ -166,11 +166,11 @@ header {
             hsl(0, 74%, 74%)
           );
           box-shadow: 2px 10px 20px 5px rgba(283, 140, 140, 0.3);
-          transition: all 5000s ease-in-out 0s;
+          transition: background 0.5s ease-in-out;
         }
 
         button:hover {
-          background-color: $col3;
+          background: $gradient3;
         }
       }
 
