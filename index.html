@@ -21,8 +21,8 @@
   <section class="hero-section">
     <!-- Hero image -->
     <div class="hero-img">
-      <img src="images/hero-mobile.jpg" alt="" class="hero-mobile">
-      <img src="images/hero-desktop.jpg" alt="" class="hero-desktop">
+      <!-- <img src="images/hero-mobile.jpg" alt="" class="hero-mobile">
+      <img src="images/hero-desktop.jpg" alt="" class="hero-desktop"> -->
     </div>
     <!-- Hero text -->
     
@@ -34,10 +34,12 @@
           Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
         <form novalidate>
-          <input type="email" id="mail" name="mail" placeholder="Email Address" required>
+          <div class="form-control">
+            <input type="email" id="mail" name="mail" placeholder="Email Address" required>
+            <img src="images/icon-error.svg" alt="" class="error-icon">
+            <button><img src="images/icon-arrow.svg" alt=""></button>
+          </div>
           <span class="error" aria-live="polite"></span>
-          <img src="images/icon-error.svg" alt="" class="error-icon">
-          <button><img src="images/icon-arrow.svg" alt=""></button>
         </form>
       </div>
     </div>

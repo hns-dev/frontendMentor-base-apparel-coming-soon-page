@@ -1,7 +1,7 @@
 const form  = document.getElementsByTagName('form')[0];
 
 const email = document.getElementById('mail');
-const emailError = document.querySelector('#mail + span.error');
+const emailError = document.querySelector('span.error');
 const emailErrorIcon = document.querySelector('.error-icon');
 
 email.addEventListener('input', function (event) {
@@ -14,11 +14,12 @@ email.addEventListener('input', function (event) {
     emailError.textContent = ''; // Reset the content of the message
     emailError.className = 'error'; // Reset the visual state of the message
     emailErrorIcon.style.display = 'none';
-    email.style.borderColor = 'initial';
-  } else {
-    // If there is still an error, show the correct error
-    showError();
+    email.className = '';
   }
+  // else {
+  //   // If there is still an error, show the correct error
+  //   showError();
+  // }
 });
 
 form.addEventListener('submit', function (event) {
@@ -39,12 +40,14 @@ function showError() {
     // display the following error message.
     emailError.textContent = 'You need to enter an e-mail address.';
     emailErrorIcon.style.display = 'block';
+    email.className = 'error-border';
     // email.style.border = '2px solid $soft-red';
   } else if(email.validity.typeMismatch) {
     // If the field doesn't contain an email address
     // display the following error message.
     emailError.textContent = 'Please provide a valid email';
     emailErrorIcon.style.display = 'block';
+    email.className = 'error-border';
     // email.style.border = '2px solid $soft-red';
   } 
 }
