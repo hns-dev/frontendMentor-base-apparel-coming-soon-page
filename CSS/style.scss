@@ -281,12 +281,6 @@ header {
       }
     }
   }
-
-  .attribution {
-    width: 50%;
-    position: absolute;
-    bottom: 0;
-  }
 }
 
 @media (min-width: 1250px) {
@@ -301,9 +295,5 @@ header {
     .hero-text {
       width: 55%;
     }
-  }
-
-  .attribution {
-    width: 55%;
   }
 }
